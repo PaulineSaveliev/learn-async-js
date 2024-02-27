@@ -1,1 +1,7 @@
 Explain the code execution based on the order of the messages logged in src/quiz/promise-2darray.txt.
+
+Sum is called on the array and string input. The function returns a promise, 
+which is then evaluated after the calls are complete. The first input is an array, so
+the timeout occurs. The second input is a string, so the promise is rejecting and 
+an error message is logged. The first, valid input then evalues, and the sum of all
+the cells in the array is calculated, returned, and logged.
