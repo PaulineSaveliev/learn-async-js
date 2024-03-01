@@ -27,6 +27,16 @@ const aliceTumbling = [
             })
     });
 
+    async function animate() {
+      try {
+        const a1status = await alice1.animate(aliceTumbling, aliceTiming).finished;
+        const a2status = await alice2.animate(aliceTumbling, aliceTiming).finished;
+        const a3status = await alice3.animate(aliceTumbling, aliceTiming).finished;
+      } catch(err) {
+        console.log(`error: ${err}`)
+      }
+    }
+
   // Promise chain  
   // alice1.animate(aliceTumbling, aliceTiming).finished  
   //   .then(() => {
